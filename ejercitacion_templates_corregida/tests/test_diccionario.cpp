@@ -1,4 +1,5 @@
 #include "gtest/gtest.h"
+#include <string>                       // Se agrega para poder correr los tests del ejercicio 6
 #include "../src/Diccionario.hpp"
 
 #if EJ >= 5
@@ -27,11 +28,36 @@ TEST(diccionario, dicc_int_int) {
 }
 #endif
 
+/**** Casos de tests ejercicio 5 funcionando correctamente :) ****/
+
 #if EJ >= 6
-
-// Agregar un test para diccionario con clave string y valor bool.
-
+/* Agregar un test para diccionario con clave string y valor bool */
+TEST(diccionario, dicc_string_bool) {
+	Diccionario<std::string, bool> d;
+	ASSERT_FALSE(d.def("hola"));
+	ASSERT_FALSE(d.def("como"));
+	ASSERT_FALSE(d.def("estas"));
+	d.definir("hola", true);
+	ASSERT_TRUE(d.def("hola"));
+	ASSERT_FALSE(d.def("como"));
+	ASSERT_FALSE(d.def("estas"));
+	ASSERT_EQ(d.obtener("hola"), true);
+	d.definir("como", false);
+	ASSERT_TRUE(d.def("hola"));
+	ASSERT_TRUE(d.def("como"));
+	ASSERT_FALSE(d.def("estas"));
+	ASSERT_EQ(d.obtener("hola"), true);
+	ASSERT_EQ(d.obtener("como"), false);
+	d.definir("hola", false);
+	ASSERT_TRUE(d.def("hola"));
+	ASSERT_TRUE(d.def("como"));
+	ASSERT_FALSE(d.def("estas"));
+	ASSERT_EQ(d.obtener("hola"), false);
+	ASSERT_EQ(d.obtener("como"), false);
+}
 #endif
+
+/**** Casos de tests ejercicio 6 funcionando correctamente :) ****/
 
 #if EJ >= 8
 
