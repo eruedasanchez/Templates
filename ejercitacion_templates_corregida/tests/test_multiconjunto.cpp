@@ -1,4 +1,5 @@
 #include "gtest/gtest.h"
+#include <string>                       // Se agrega para poder correr los tests del ejercicio 8
 #include "../src/Multiconjunto.hpp"
 
 #if EJ >= 7
@@ -39,6 +40,8 @@ TEST(multiconjunto, multiconj_string) {
 	ASSERT_EQ(m.ocurrencias("bar"), 3);
 }
 #endif
+
+/**** Casos de tests ejercicio 7 funcionando correctamente :) ****/
 
 #if EJ >= 9
 TEST(multiconjunto_inclusion, vacio) {
