@@ -19,6 +19,8 @@ TEST(Templates, cuadrado) {
 
 #endif
 
+/**** Casos de tests ejercicio 1 funcionando correctamente :) ****/
+
 #if EJ>=2
 
 TEST(Templates, contiene) {
@@ -34,6 +36,8 @@ TEST(Templates, contiene) {
 }
 
 #endif
+
+/**** Casos de tests ejercicio 2 funcionando correctamente :) ****/
 
 #if EJ>=3
 
@@ -51,10 +55,12 @@ TEST(Templates, esPrefijo) {
 
 #endif
 
+/**** Casos de tests ejercicio 3 funcionando correctamente :) ****/
+
 #if EJ>=4
 
 TEST(Templates, maximo) {
-  EXPECT_EQ((maximo<string, char>(string("Hola"))), 'o');
+    EXPECT_EQ((maximo<string, char>(string("Hola"))), 'o');
   EXPECT_EQ((maximo<string, char>(string("HOla"))), 'l');
   EXPECT_EQ((maximo<string, char>(string("hOLA"))), 'h');
 
@@ -64,3 +70,5 @@ TEST(Templates, maximo) {
 }
 
 #endif
+
+/**** Casos de tests ejercicio 4 funcionando correctamente :) ****/
