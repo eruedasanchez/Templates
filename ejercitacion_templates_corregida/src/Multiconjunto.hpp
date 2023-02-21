@@ -10,6 +10,7 @@ public:
     Multiconjunto();
     void agregar(T x);
     int ocurrencias(T x) const;
+    bool operator<=(Multiconjunto<T> otro) const;
 
 private:
     std::map<T,int> _multiconj;
@@ -40,4 +41,19 @@ int Multiconjunto<T>::ocurrencias(T x) const {
     return apariciones;
 }
 
+template<class T>
+bool Multiconjunto<T>::operator<=(Multiconjunto<T> otro) const {
+    bool incluido = true;
+    unsigned int index = 0;
+    for(std::pair<T,int> tcs : _multiconj){
+        if(otro.ocurrencias(tcs.first) < tcs.second){
+            incluido = false;
+        }
+    }
+    return incluido;
+}
+
 #endif /*__MULTICONJUNTO_HPP*/
+
+
+
