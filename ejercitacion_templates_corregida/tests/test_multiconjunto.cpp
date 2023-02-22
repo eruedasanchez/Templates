@@ -116,3 +116,5 @@ TEST(multiconjunto_inclusion, no_incluido_ocurrencias) {
 	ASSERT_FALSE(m1 <= m2);
 }
 #endif
+
+/**** Casos de tests ejercicio 9 funcionando correctamente :) ****/
