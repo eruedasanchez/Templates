@@ -95,3 +95,6 @@ TEST(diccionario, claves) {
 }
 
 #endif
+
+/**** Casos de tests ejercicio 8 funcionando correctamente :) ****/
+
