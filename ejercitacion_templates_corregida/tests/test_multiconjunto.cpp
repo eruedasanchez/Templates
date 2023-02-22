@@ -117,4 +117,4 @@ TEST(multiconjunto_inclusion, no_incluido_ocurrencias) {
 }
 #endif
 
-/**** Casos de tests ejercicio 9 funcionando correctamente :) ****/
+/*** Casos de tests ejercicio 9 funcionando correctamente :) ***/
